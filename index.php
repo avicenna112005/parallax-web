@@ -1,2 +1,1 @@
-<?php
-echo"halo";
+<!-- buat landing page -->
