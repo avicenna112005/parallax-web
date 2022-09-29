@@ -1,1 +1,1 @@
-<!-- buat landing page -->
+<!-- landing page -->
