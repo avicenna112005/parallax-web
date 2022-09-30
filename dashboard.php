@@ -71,9 +71,7 @@ include 'conn.php';
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Edit Data Produk</a>
-                        <a class="collapse-item" href="utilities-border.html">Edit Data Barang </a>
+                        <h6 class="collapse-header">Action:</h6>
                         <a class="collapse-item" href="utilities-animation.html">Tambah Data Produk</a>
                         <a class="collapse-item" href="utilities-other.html">Tambah Data Barang</a>
                     </div>
@@ -191,9 +189,6 @@ include 'conn.php';
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Data Produk</h1>
-
-                    <!-- isi disini -->
-                    <button type="button" class="btn btn-primary" style="margin-left: 900px; margin-bottom: 30px;">Tambahkan Data</button>
 
                     <table class="table table-hover">
                         <thead>
