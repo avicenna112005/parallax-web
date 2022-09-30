@@ -1,5 +1,11 @@
 <?php 
 session_start();
+
+if(isset($_SESSION["login"])){
+    header("Location: dashboard.php");
+    exit;
+}
+
 require 'function.php';
 require 'conn.php';
 
