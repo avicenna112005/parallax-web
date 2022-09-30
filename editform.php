@@ -1,10 +1,15 @@
 <?php 
+session_start();
 include 'conn.php';
 $id_produk = $_GET['id_produk'];
 $sql = "SELECT * FROM produk_info WHERE id_produk = '$id_produk'";
 $query = mysqli_query($conn,$sql);
 $value = mysqli_fetch_assoc($query);
 
+if(!isset($_SESSION["login"])){
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

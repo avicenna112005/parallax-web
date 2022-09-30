@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include 'conn.php';
 $id_berita = $_GET['id_berita'];
 $sql = "SELECT * FROM berita WHERE id_berita = '$id_berita'";
@@ -6,6 +7,10 @@ $query = mysqli_query($conn,$sql);
 $value = mysqli_fetch_assoc($query);
 
 
+if(!isset($_SESSION["login"])){
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

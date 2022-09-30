@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require 'function.php';
 require 'conn.php';
 
@@ -11,6 +12,8 @@ if(isset($_POST["login"])){
     if(mysqli_num_rows($result) === 1){
         $row = mysqli_fetch_array($result);
         if (password_verify($password, $row["password"])){
+            // set session
+            $_SESSION["login"] = true;
             header("Location: dashboard.php");
             exit;
         }
