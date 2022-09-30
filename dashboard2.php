@@ -1,24 +1,18 @@
-<?php 
+<?php
 include 'conn.php';
-$id_produk = $_GET['id_produk'];
-$sql = "SELECT * FROM produk_info WHERE id_produk = '$id_produk'";
-$query = mysqli_query($conn,$sql);
-$value = mysqli_fetch_assoc($query);
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-
     <title>DistinctTrends - Admin</title>
 
     <!-- Custom fonts for this template-->
@@ -62,7 +56,7 @@ $value = mysqli_fetch_assoc($query);
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Explore</h6>
                         <a class="collapse-item" href="dashboard.php">Data Produk</a>
-                        <a class="collapse-item" href="">Data Berita</a>
+                        <a class="collapse-item" href="dashboard2.php">Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -72,15 +66,17 @@ $value = mysqli_fetch_assoc($query);
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <iconify-icon icon="ic:baseline-miscellaneous-services" ></iconify-icon>
-                    <span>Acion</span>
+                    <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Action:</h6>
+
+                        <h6 class="collapse-header" >Action :</h6>
+                       
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
-                        <a class="collapse-item" href="">Tambah Data Barang</a>
-                    </div>
+                        <a class="collapse-item" href="create2.php">Tambah Data Barang</a>
+
                 </div>
             </li>
 
@@ -106,6 +102,20 @@ $value = mysqli_fetch_assoc($query);
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -172,36 +182,55 @@ $value = mysqli_fetch_assoc($query);
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
+                    <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Data Produk</h1>
 
-                    <form action="edit.php" method="post">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
-                            <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_produk" value="<?= $value['id_produk']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk" value="<?= $value['nama_produk']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Harga</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="harga" value="<?= $value['harga']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Tanggal Rilis</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalRilis" value="<?= $value['tanggal_rilis']?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Stok</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
-                        </div>
-                        <!-- <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Stok</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
-                        </div> buat upload image -->
-                        
-                        <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
-                    </form>
+
+                    <!-- isi disini -->
+                    <div class="bungkus" style="width: auto; height:450px; overflow: auto; ">
+                        <table class="table table-hover" style="margin-top: 5%;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id Berita</th>
+                                    <th scope="col">Judul</th>
+                                    <th scope="col">Tanggal Upload</th>
+                                    <th scope="col">Headline</th>
+                                    <th scope="col">Isi 1</th>
+                                    <th scope="col">Isi 2</th>
+                                    <th scope="col">Gambar</th>
+                                    <th scope="col">Action</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php 
+                            $i = 1;
+                            $sql = "SELECT * FROM berita";
+                            $query = mysqli_query($conn,$sql);
+                            while($value = mysqli_fetch_array($query)){    
+                            echo"
+                            
+                            <tr>
+                                <td>$i</td>
+                                <td>$value[id_berita]</td>
+                                <td>$value[judul]</td>
+                                <td>$value[tanggal_upload]</td>
+                                <td>$value[headline]</td>
+                                <td>$value[isi1]</td>
+                                <td>$value[isi2]</td>
+                                <td>$value[gambar]</td>
+                                <td>
+                                    <a href='editform2.php?id_berita=".$value['id_berita']."' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
+                                    <a href='delete2.php?id_berita=".$value['id_berita']."' style='color: #fff;'> <button type='button' class='btn btn-danger'>Delete</button></a>
+                                </td>
+                            </tr>";
+                            $i++;
+                        } 
+                    ?> 
+                        </table>
+                    </div>
+                    
+                    
                 </div>
                 <!-- /.container-fluid -->
 
@@ -228,7 +257,7 @@ $value = mysqli_fetch_assoc($query);
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">x</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>

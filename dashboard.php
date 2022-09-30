@@ -56,7 +56,7 @@ include 'conn.php';
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="dashboard.php">Data Produk</a>
-                        <a class="collapse-item" href="cards.html">Data Berita</a>
+                        <a class="collapse-item" href="dashboard2.php">Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -75,7 +75,7 @@ include 'conn.php';
                         <h6 class="collapse-header" >Action :</h6>
                        
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
-                        <a class="collapse-item" href="">Tambah Data Barang</a>
+                        <a class="collapse-item" href="create2.php">Tambah Data Barang</a>
 
                 </div>
             </li>
@@ -164,14 +164,6 @@ include 'conn.php';
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">

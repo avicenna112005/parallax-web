@@ -1,9 +1,10 @@
 <?php 
 include 'conn.php';
-$id_produk = $_GET['id_produk'];
-$sql = "SELECT * FROM produk_info WHERE id_produk = '$id_produk'";
+$id_berita = $_GET['id_berita'];
+$sql = "SELECT * FROM berita WHERE id_berita = '$id_berita'";
 $query = mysqli_query($conn,$sql);
 $value = mysqli_fetch_assoc($query);
+
 
 ?>
 
@@ -62,7 +63,7 @@ $value = mysqli_fetch_assoc($query);
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Explore</h6>
                         <a class="collapse-item" href="dashboard.php">Data Produk</a>
-                        <a class="collapse-item" href="">Data Berita</a>
+                        <a class="collapse-item" href="dashboard2.php">Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -72,14 +73,14 @@ $value = mysqli_fetch_assoc($query);
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <iconify-icon icon="ic:baseline-miscellaneous-services" ></iconify-icon>
-                    <span>Acion</span>
+                    <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Action:</h6>
+                        <h6 class="collapse-header">Action</h6>
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
-                        <a class="collapse-item" href="">Tambah Data Barang</a>
+                        <a class="collapse-item" href="create2.php">Tambah Data Barang</a>
                     </div>
                 </div>
             </li>
@@ -172,35 +173,35 @@ $value = mysqli_fetch_assoc($query);
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Edit Data Barang</h1>
 
-                    <form action="edit.php" method="post">
+                    <form action="edit2.php" method="post">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
-                            <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_produk" value="<?= $value['id_produk']?>">
+                            <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_berita" value="<?= $value['id_berita']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk" value="<?= $value['nama_produk']?>">
+                            <label for="exampleInputEmail1" class="form-label">Judul</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="judul" value="<?= $value['judul']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Harga</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="harga" value="<?= $value['harga']?>">
+                            <label for="exampleInputPassword1" class="form-label">Headline</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="headline" value="<?= $value['headline']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Tanggal Rilis</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalRilis" value="<?= $value['tanggal_rilis']?>">
+                            <label for="exampleInputPassword1" class="form-label">Isi 1</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi1" value="<?= $value['isi1']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Stok</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
+                            <label for="exampleInputPassword1" class="form-label">Isi 2</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi2" value="<?= $value['isi2']?>">
                         </div>
                         <!-- <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Stok</label>
                             <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
                         </div> buat upload image -->
                         
-                        <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
+                        <button type="submit" class="btn btn-primary" name="submit">Ubah</button>
                     </form>
                 </div>
                 <!-- /.container-fluid -->
