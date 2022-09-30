@@ -98,6 +98,22 @@ body{
     left: 94px;
     top: 1941px;
 }
+#section4{
+    background-image: url('/img/berlin-fashion-week-autumn-2015.png');
+    position: absolute;
+    width: 267px;
+    height: 220px;
+    left: 421px;
+    top: 1941px;
+}
+#section5{
+    background-image: url('/img/621319eeca7b2.png');
+    position: absolute;
+    width: 267px;
+    height: 168px;
+    left: 748px;
+top: 1941px;
+}
 .text-link{
    position: absolute;
    width: 216px;
