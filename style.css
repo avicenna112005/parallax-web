@@ -70,4 +70,100 @@ body{
     border-radius: 25px;
     margin-top: 769px;
     margin-left: 200px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+.text{
+    position: absolute;
+    width: 186px;
+    height: 64px;
+    left: 56px;
+    top: 1846px;
+    font-family:'Lora', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    color: rgba(49, 49, 49, 0.86);
+}
+#section3{
+    background-image: url('/img/photo_2022-09-30_14-06-00.png');
+    background-size: 400px;
+    position: absolute;
+    width: 280px;
+    height: 220px;
+    left: 94px;
+    top: 1941px;
+}
+#section4{
+    background-image: url('/img/berlin-fashion-week-autumn-2015.png');
+    position: absolute;
+    width: 267px;
+    height: 220px;
+    left: 421px;
+    top: 1941px;
+}
+#section5{
+    background-image: url('/img/621319eeca7b2.png');
+    position: absolute;
+    width: 267px;
+    height: 168px;
+    left: 748px;
+top: 1941px;
+}
+.text-link{
+   position: absolute;
+   width: 216px;
+   height: 82px;
+   left: 36px;
+   margin-top: 680px;
+   font-family:'Lora', serif;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 20px;
+   display: flex;
+   align-items: center;
+
+   color: #1d42c5;
+}
+.text-link a{
+    text-decoration: none;
+}
+.text-link a:hover{
+    color: grey;
+}
+.web{
+    position: absolute;
+    width: 139px;
+    height: 38px;
+    left: 92px;
+    margin-top: 446px;
+    font-family:'Lora', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(49, 49, 49, 0.6);
+}
+.viewers{
+    position: absolute;
+    width: 158px;
+    height: 26px;
+    left: 92px;
+    margin-top: 470px;
+    font-family:'Lora', serif ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: rgba(49, 49, 49, 0.6);
 }
