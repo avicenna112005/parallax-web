@@ -1,3 +1,7 @@
+<?php
+include 'conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,6 +193,45 @@
                     <h1 class="h3 mb-4 text-gray-800">Data Produk</h1>
 
                     <!-- isi disini -->
+                    <button type="button" class="btn btn-primary" style="margin-left: 900px; margin-bottom: 30px;">Tambahkan Data</button>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nama Produk</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col">Tanggal Rilis</th>
+                                <th scope="col">Stok</th>
+                                <th scope="col">Gambar</th>
+                                <th scope="col">Action</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php 
+                        $i = 1;
+                        $sql = "SELECT * FROM produk_info";
+                        $query = mysqli_query($conn,$sql);
+                        while($value = mysqli_fetch_array($query)){    
+                        echo"
+                        <tr>
+                            <td>$i</td>
+                            <td>$value[nama_produk]</td>
+                            <td>$value[harga]</td>
+                            <td>$value[tanggal_rilis]</td>
+                            <td>$value[stok]</td>
+                            <td>$value[gambar]</td>
+                            <td>
+                                <a href='editform.php' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
+                                <a href='delete.php' style='color: #fff;'> <button type='button' class='btn btn-danger'>Delete</button></a>
+                            </td>
+                        </tr>";
+                        $i++;
+                    } 
+                ?> 
+                    </table>
+                    
                 </div>
                 <!-- /.container-fluid -->
 
