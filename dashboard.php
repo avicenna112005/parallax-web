@@ -12,7 +12,7 @@ include 'conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
     <title>DistinctTrends - Admin</title>
 
     <!-- Custom fonts for this template-->
@@ -49,13 +49,13 @@ include 'conn.php';
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <iconify-icon icon="bxs:data"></iconify-icon>
                     <span>Data Master</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Data Produk</a>
+                        <a class="collapse-item" href="dashboard.php">Data Produk</a>
                         <a class="collapse-item" href="cards.html">Data Berita</a>
                     </div>
                 </div>
@@ -65,14 +65,14 @@ include 'conn.php';
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <iconify-icon icon="ic:baseline-miscellaneous-services" ></iconify-icon>
                     <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <h6 class="collapse-header">Action :</h6>
+                        <h6 class="collapse-header" >Action :</h6>
                        
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
                         <a class="collapse-item" href="">Tambah Data Barang</a>
@@ -80,7 +80,7 @@ include 'conn.php';
                 </div>
             </li>
 
-        <br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

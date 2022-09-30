@@ -7,8 +7,8 @@ if(isset($_POST['submit'])){
     $tanggalRilis = $_POST['tanggalRilis'];
     $stok = $_POST['stok'];
     
-    $sql = "INSERT INTO produk_info VALUES ('','$nama','$harga','$tanggalRilis','$stok','');
-    $query = mysqli_query($conn,$sql)";
+    $sql = "INSERT INTO produk_info (id_produk, nama_produk, harga, tanggal_rilis, stok, gambar)VALUES ('','$nama','$harga','$tanggalRilis','$stok','')";
+    $query = mysqli_query($conn,$sql);
 
     if($query){
         echo "<script>

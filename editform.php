@@ -1,7 +1,7 @@
 <?php 
 include 'conn.php';
-$id = $_GET['id_produk'];
-$sql = "SELECT * FROM produk_info WHERE id_produk = '$id'";
+$id_produk = $_GET['id_produk'];
+$sql = "SELECT * FROM produk_info WHERE id_produk = '$id_produk'";
 $query = mysqli_query($conn,$sql);
 $value = mysqli_fetch_assoc($query);
 
@@ -182,7 +182,11 @@ $value = mysqli_fetch_assoc($query);
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
 
-                    <form action="savecreate.php" method="post">
+                    <form action="edit.php" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
+                            <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_produk" value="<?= $value['id_produk']?>">
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk" value="<?= $value['nama_produk']?>">
