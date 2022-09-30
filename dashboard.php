@@ -71,11 +71,12 @@ include 'conn.php';
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
+
                         <h6 class="collapse-header">Action :</h6>
                        
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
                         <a class="collapse-item" href="">Tambah Data Barang</a>
-                    </div>
+
                 </div>
             </li>
 
@@ -191,6 +192,7 @@ include 'conn.php';
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Data Produk</h1>
 
+
                     <!-- isi disini -->
                     <div class="bungkus" style="width: auto; height:450px; overflow: auto; ">
                         <table class="table table-hover" style="margin-top: 5%;">
@@ -214,6 +216,7 @@ include 'conn.php';
                             $query = mysqli_query($conn,$sql);
                             while($value = mysqli_fetch_array($query)){    
                             echo"
+                            
                             <tr>
                                 <td>$i</td>
                                 <td>$value[id_produk]</td>
