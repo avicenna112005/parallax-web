@@ -1,3 +1,7 @@
+<?php
+include 'conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,16 +66,15 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>masih ndak tau isi apa</span>
+                    <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Action :</h6>
+                       
+                        <a class="collapse-item" href="create.php">Tambah Data Produk</a>
+                        <a class="collapse-item" href="">Tambah Data Barang</a>
                     </div>
                 </div>
             </li>
@@ -186,9 +189,33 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Tambah Data Produk</h1>
+                    <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Data Produk</h1>
 
                     <!-- isi disini -->
+                    <form action="savecreate.php" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Harga</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="harga">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Tanggal Rilis</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalRilis">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
+                        </div> buat upload image -->
+                        
+                        <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
+                    </form>
                 </div>
                 <!-- /.container-fluid -->
 

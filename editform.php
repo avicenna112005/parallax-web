@@ -1,3 +1,13 @@
+<?php 
+include 'conn.php';
+$id = $_GET['id_produk'];
+$sql = "SELECT * FROM produk_info WHERE id_produk = '$id'";
+$query = mysqli_query($conn,$sql);
+$value = mysqli_fetch_assoc($query);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,20 +109,6 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -188,21 +184,29 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
 
-                    <form action="edit.php" method="post">
+                    <form action="savecreate.php" method="post">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk" value="<?= $value['nama_produk']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputPassword1" class="form-label">Harga</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="harga" value="<?= $value['harga']?>">
                         </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Tanggal Rilis</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalRilis" value="<?= $value['tanggal_rilis']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
+                        </div> buat upload image -->
+                        
+                        <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
                     </form>
                 </div>
                 <!-- /.container-fluid -->
@@ -230,7 +234,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>

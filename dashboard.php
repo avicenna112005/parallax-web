@@ -6,7 +6,7 @@ include 'conn.php';
 <html lang="en">
 
 <head>
-
+   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -192,7 +192,7 @@ include 'conn.php';
                     <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Data Produk</h1>
 
                     <!-- isi disini -->
-                    <div class="bungkus" style="width: auto; height:450px; overflow: auto;">
+                    <div class="bungkus" style="width: auto; height:450px; overflow: auto; ">
                         <table class="table table-hover" style="margin-top: 5%;">
                             <thead>
                                 <tr>
