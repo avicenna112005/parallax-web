@@ -71,10 +71,12 @@ include 'conn.php';
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Action:</h6>
-                        <a class="collapse-item" href="utilities-animation.html">Tambah Data Produk</a>
-                        <a class="collapse-item" href="utilities-other.html">Tambah Data Barang</a>
-                    </div>
+
+                        <h6 class="collapse-header">Action :</h6>
+                       
+                        <a class="collapse-item" href="create.php">Tambah Data Produk</a>
+                        <a class="collapse-item" href="">Tambah Data Barang</a>
+
                 </div>
             </li>
 
@@ -188,44 +190,52 @@ include 'conn.php';
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Data Produk</h1>
+                    <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Data Produk</h1>
 
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nama Produk</th>
-                                <th scope="col">Harga</th>
-                                <th scope="col">Tanggal Rilis</th>
-                                <th scope="col">Stok</th>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Action</th>
+
+                    <!-- isi disini -->
+                    <div class="bungkus" style="width: auto; height:450px; overflow: auto;">
+                        <table class="table table-hover" style="margin-top: 5%;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id Produk</th>
+                                    <th scope="col">Nama Produk</th>
+                                    <th scope="col">Harga</th>
+                                    <th scope="col">Tanggal Rilis</th>
+                                    <th scope="col">Stok</th>
+                                    <th scope="col">Gambar</th>
+                                    <th scope="col">Action</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php 
+                            $i = 1;
+                            $sql = "SELECT * FROM produk_info";
+                            $query = mysqli_query($conn,$sql);
+                            while($value = mysqli_fetch_array($query)){    
+                            echo"
                             
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php 
-                        $i = 1;
-                        $sql = "SELECT * FROM produk_info";
-                        $query = mysqli_query($conn,$sql);
-                        while($value = mysqli_fetch_array($query)){    
-                        echo"
-                        <tr>
-                            <td>$i</td>
-                            <td>$value[nama_produk]</td>
-                            <td>$value[harga]</td>
-                            <td>$value[tanggal_rilis]</td>
-                            <td>$value[stok]</td>
-                            <td>$value[gambar]</td>
-                            <td>
-                                <a href='editform.php' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
-                                <a href='delete.php' style='color: #fff;'> <button type='button' class='btn btn-danger'>Delete</button></a>
-                            </td>
-                        </tr>";
-                        $i++;
-                    } 
-                ?> 
-                    </table>
+                            <tr>
+                                <td>$i</td>
+                                <td>$value[id_produk]</td>
+                                <td>$value[nama_produk]</td>
+                                <td>$value[harga]</td>
+                                <td>$value[tanggal_rilis]</td>
+                                <td>$value[stok]</td>
+                                <td>$value[gambar]</td>
+                                <td>
+                                    <a href='editform.php?id_produk=".$value['id_produk']."' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
+                                    <a href='delete.php?id_produk=".$value['id_produk']."' style='color: #fff;'> <button type='button' class='btn btn-danger'>Delete</button></a>
+                                </td>
+                            </tr>";
+                            $i++;
+                        } 
+                    ?> 
+                        </table>
+                    </div>
+                    
                     
                 </div>
                 <!-- /.container-fluid -->
