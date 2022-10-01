@@ -127,7 +127,7 @@ if(isset($_POST["login"])){
                         <label for="name">Permit :</label>
                     </td>
                     <td>
-                        <input type="text" name="kode_permit" id="kode_permit">
+                        <input type="text" name="kode_permit" id="kode_permit" autocomplete="off">
                     </td>
                 </tr>
                 <tr>
@@ -135,7 +135,7 @@ if(isset($_POST["login"])){
                         <label for="username">Username :</label>
                     </td>
                     <td>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" autocomplete="off">
                     </td>
                 </tr>
                 <tr>
