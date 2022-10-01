@@ -89,6 +89,7 @@ if(isset($_POST["login"])){
         }
         .button{
             background-color: #434CE7;
+            color: white;
             cursor: pointer;
             width: 100px;
             border-radius: 15px;
