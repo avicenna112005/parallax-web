@@ -64,7 +64,7 @@ if(!isset($_SESSION["login"])){
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Explore</h6>
                         <a class="collapse-item" href="dashboard.php">Data Produk</a>
-                        <a class="collapse-item" href="">Data Berita</a>
+                        <a class="collapse-item" href="dashboard2.php">Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -74,14 +74,14 @@ if(!isset($_SESSION["login"])){
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <iconify-icon icon="ic:baseline-miscellaneous-services" ></iconify-icon>
-                    <span>Acion</span>
+                    <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Action:</h6>
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
-                        <a class="collapse-item" href="">Tambah Data Barang</a>
+                        <a class="collapse-item" href="create2.php">Tambah Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -146,18 +146,14 @@ if(!isset($_SESSION["login"])){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin 1</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <div class="dropdown-divider"></div>
+                               
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -176,7 +172,8 @@ if(!isset($_SESSION["login"])){
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
 
-                    <form action="edit.php" method="post">
+                    <form action="edit.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="gambarLama" value="<?= $value['gambar'];?>">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
                             <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_produk" value="<?= $value['id_produk']?>">
@@ -197,11 +194,14 @@ if(!isset($_SESSION["login"])){
                             <label for="exampleInputPassword1" class="form-label">Stok</label>
                             <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
                         </div>
-                        <!-- <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Stok</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok">
-                        </div> buat upload image -->
-                        
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Gambar</label>
+                            <br>
+                            <img src="image/<?=$value ['gambar'] ?>" alt="" width="150">
+                            <br><br>
+                            <input type="file" id="exampleInputPassword1" name="gambar">
+                        </div>
+                         
                         <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
                     </form>
                 </div>
@@ -236,7 +236,7 @@ if(!isset($_SESSION["login"])){
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

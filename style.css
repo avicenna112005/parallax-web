@@ -24,7 +24,7 @@ body{
 }
 
 .nav-link{
-    font-family: 'Lora', serif;;
+    font-family: 'Lora', serif;
     font-size: 13px;
     display: flex;
     width: 500px;
@@ -45,7 +45,7 @@ body{
     background-image: url('/img/fashion.png');
     background-size: cover;
     height: 770px;
-    width: 1000x;
+    width: 1000px;
 }
 #section1 button{
     width: 282px;
@@ -103,30 +103,38 @@ body{
     position: absolute;
     width: 267px;
     height: 220px;
-    left: 421px;
+    left: 400px;
     top: 1941px;
 }
 #section5{
     background-image: url('/img/621319eeca7b2.png');
+    background-size: cover;
     position: absolute;
-    width: 267px;
-    height: 168px;
-    left: 748px;
-top: 1941px;
+    width: 330px;
+    height: 220px;
+    left: 690px;
+    top: 1941px;
+}
+#section6{
+    background-image: url('/img/036274500_1488368937-_MG_0553.png');
+    background-size: cover;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 1040px;
+    top: 1941px;
 }
 .text-link{
-   position: absolute;
-   width: 216px;
-   height: 82px;
-   left: 36px;
-   margin-top: 680px;
-   font-family:'Lora', serif;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 16px;
-   line-height: 20px;
-   display: flex;
-   align-items: center;
+    font-family: 'Lora', serif;;
+    font-size: 13px;
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    position: absolute;
+    top: 320px;
+    left: 15px;
+    line-height: 20px;
+    font-weight: 600;
 
    color: #1d42c5;
 }
@@ -166,4 +174,30 @@ top: 1941px;
     display: flex;
     align-items: center;
     color: rgba(49, 49, 49, 0.6);
+}
+.footer{
+    position: absolute;
+    width: 1440px;
+    height: 300px;
+    left: 0px;
+    top: 2363px;
+    background-color: #313131; 
+}
+.footer p{
+    position: fixed;
+    width: 320px;
+    height: 56px;
+    left: 35px;
+    top: 1000px;
+
+    font-family:'Pacifico', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
 }

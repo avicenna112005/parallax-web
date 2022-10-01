@@ -1,5 +1,6 @@
 <?php
 include 'conn.php';
+include 'function.php';
 
 if(isset($_POST['submit'])){
     $judul = $_POST['judul'];
@@ -7,7 +8,7 @@ if(isset($_POST['submit'])){
     $tanggalUp = $_POST['tanggalUp'];
     $isi1 = $_POST['isi1'];
     $isi2 = $_POST['isi2'];
-    
+
     $sql = "INSERT INTO berita VALUES ('','$judul','$tanggalUp','$headline','$isi1','$isi2','')";
     $query = mysqli_query($conn,$sql);
 

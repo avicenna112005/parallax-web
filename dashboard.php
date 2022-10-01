@@ -75,7 +75,7 @@ if(!isset($_SESSION["login"])){
                         <h6 class="collapse-header" >Action :</h6>
                        
                         <a class="collapse-item" href="create.php">Tambah Data Produk</a>
-                        <a class="collapse-item" href="create2.php">Tambah Data Barang</a>
+                        <a class="collapse-item" href="create2.php">Tambah Data Berita</a>
 
                 </div>
             </li>
@@ -104,18 +104,7 @@ if(!isset($_SESSION["login"])){
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="dashboard.php" method="GET">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2" name="searchingbox" value="<?php if(isset($_GET['searchingbox'])){echo $_GET['searchingbox'];}?>">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit" name="buttonsearch">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
+                  
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -153,18 +142,14 @@ if(!isset($_SESSION["login"])){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin 1</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <div class="dropdown-divider"></div>
+                                    
                                 <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -205,18 +190,7 @@ if(!isset($_SESSION["login"])){
                             <?php 
                             $i = 1;
                             include 'conn.php';
-                            if(isset($_GET['searchingbox'])){
-                                $searching = $_GET['searchingbox'];
-                                $sql = "SELECT * FROM produk_info WHERE 
-                                    nama_produk LIKE '% . $searching . %' OR 
-                                    harga LIKE '% . $searching . %' OR 
-                                    tanggal_rilis LIKE '% . $searching . %' OR 
-                                    stok LIKE '% . $searching . %' OR 
-                                    gambar LIKE '% . $searching . %' OR    
-                                    id_produk LIKE '% . $searching . %  ORDER BY id_produk ASC";
-                            }else{
-                                $sql = "SELECT * FROM produk_info";
-                            }
+                            $sql = "SELECT * FROM produk_info";
                             $query = mysqli_query($conn,$sql);
                             while($value = mysqli_fetch_assoc($query)){    
                             echo"
@@ -228,6 +202,7 @@ if(!isset($_SESSION["login"])){
                                 <td>$value[tanggal_rilis]</td>
                                 <td>$value[stok]</td>
                                 <td>$value[gambar]</td>
+                                
                                 <td>
                                     <a href='editform.php?id_produk=".$value['id_produk']."' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
                                     <a href='delete.php?id_produk=".$value['id_produk']."' style='color: #fff;'> <button type='button' class='btn btn-danger'>Delete</button></a>
