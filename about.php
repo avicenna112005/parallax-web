@@ -193,7 +193,7 @@
                 <p>Legal & Privacy</p>
                 <p>About</p>
                 <p>Sitemap</p>
-            </div>
+            </div>  
         </div>
     </div>
 </body>
