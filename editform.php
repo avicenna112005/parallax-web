@@ -1,3 +1,17 @@
+<?php 
+session_start();
+include 'conn.php';
+$id_produk = $_GET['id_produk'];
+$sql = "SELECT * FROM produk_info WHERE id_produk = '$id_produk'";
+$query = mysqli_query($conn,$sql);
+$value = mysqli_fetch_assoc($query);
+
+if(!isset($_SESSION["login"])){
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
 
     <title>DistinctTrends - Admin</title>
 
@@ -32,9 +47,6 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
                 <div class="sidebar-brand-text mx-3" style="text-transform: none;">DistinctTrends</div>
             </a>
 
@@ -45,14 +57,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <iconify-icon icon="bxs:data"></iconify-icon>
                     <span>Data Master</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Data Produk</a>
-                        <a class="collapse-item" href="cards.html">Data Berita</a>
+                        <h6 class="collapse-header">Explore</h6>
+                        <a class="collapse-item" href="dashboard.php">Data Produk</a>
+                        <a class="collapse-item" href="dashboard2.php">Data Berita</a>
                     </div>
                 </div>
             </li>
@@ -61,20 +73,20 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Acion</span>
+                    <iconify-icon icon="ic:baseline-miscellaneous-services" ></iconify-icon>
+                    <span>Action</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Action:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Tambah Data Produk</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Data Barang</a>
+                        <a class="collapse-item" href="create.php">Tambah Data Produk</a>
+                        <a class="collapse-item" href="create2.php">Tambah Data Berita</a>
                     </div>
                 </div>
             </li>
 
-        <br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -96,20 +108,6 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -148,26 +146,14 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin 1</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
+                               
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -186,21 +172,37 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Edit Data Produk</h1>
 
-                    <form action="edit.php" method="post">
+                    <form action="edit.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="gambarLama" value="<?= $value['gambar'];?>">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
+                            <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_produk" value="<?= $value['id_produk']?>">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputEmail1" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="namaProduk" value="<?= $value['nama_produk']?>">
                         </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Harga</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="harga" value="<?= $value['harga']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Tanggal Rilis</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalRilis" value="<?= $value['tanggal_rilis']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Gambar</label>
+                            <br>
+                            <img src="image/<?=$value ['gambar'] ?>" alt="" width="150">
+                            <br><br>
+                            <input type="file" id="exampleInputPassword1" name="gambar">
+                        </div>
+                         
+                        <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>
                     </form>
                 </div>
                 <!-- /.container-fluid -->
@@ -228,13 +230,13 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>
