@@ -45,19 +45,12 @@ if(isset($_POST["login"])){
             padding: 0;
             font-family: 'Quicksand', sans-serif;
         }
-        .all
-        
-        img {
-            width: 500px;
-            height: 700px;
+        .login{
             position: relative;
-            float: right;
-            margin-right: 10px ;
-            margin-top: 10px ;
-            margin-bottom: 10px;
-            border-radius: 15px;
-
         }
+
+        
+      
         .judul1{
             position: relative;
             top: 130px;
@@ -123,6 +116,7 @@ if(isset($_POST["login"])){
     <!-- image -->
     <div class="all"> 
         <form action="" method="post">
+            <div class="login">
             <div class="judul1">
                 <h3>DistrictTrends</h3>
                 <div class="garis"></div>
@@ -144,6 +138,7 @@ if(isset($_POST["login"])){
                 <br>
                 <div class="background"></div>    
                 <td><a href="dashboard.php" ><button class="button" type="submit" name="login"> Login</button style="cursor: pointer;"></a></td>
+            </div>
             </div>
         </form>
     </div>
