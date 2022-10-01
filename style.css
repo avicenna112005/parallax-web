@@ -124,6 +124,102 @@ body{
     left: 1040px;
     top: 1941px;
 }
+#section7{
+    background-image: url('/img/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.png');
+    background-size: contain;
+    position: absolute;
+    width: 186px;
+    height: 250px;
+    left: 90px;
+    top: 1010px;
+}
+#section7 p{
+    position: absolute;
+    width: 86px;
+    height: 36px;
+    left: 0;
+    top: 250px;
+
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: whitesmoke;
+}
+#section8{
+    background-image: url('/img/reza-delkhosh-iRAOJYtPHZE-unsplash.png');
+    background-size: contain;
+    position: absolute;
+    width: 230.97px;
+    height: 250px;
+    left: 360px;
+    top: 1010px;
+}
+#section8 p{
+    position: absolute;
+    width: 86px;
+    height: 43.1px;
+    left: 0;
+    top: 250px;
+
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: whitesmoke;
+}
+#section9{
+    background-image: url('/img/mohamadreza-khashay-ziubUDopHmc-unsplash.png');
+    background-size: contain;
+    position: absolute;
+    width: 197.69px;
+    height: 246px;
+    left: 664px;
+    top: 1010px;
+}
+#section9 p{
+    position: absolute;
+    width: 86px;
+    height: 50px;
+    left: 0;
+    top: 250px;
+
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: whitesmoke;
+}
+#section10{
+    background-image: url('/img/tanya-layko-QINaeQQHghQ-unsplash.png');
+    background-size: contain;
+    position: absolute;
+    width: 189px;
+    height: 250px;
+    left: 930px;
+    top: 1010px;
+}
+#section10 p{
+    position: absolute;
+    width: 86px;
+    height: 50px;
+    left: 0;
+    top: 250px;
+
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: whitesmoke;
+}
 .text-link1{
     font-family: 'Lora', serif;
     font-size: 13px;
