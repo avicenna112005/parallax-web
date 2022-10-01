@@ -137,7 +137,7 @@ if(isset($_POST["login"])){
                 <a href="signinpage.php" style="position: absolute; left: 0px; top:95px;">Sign In</a>
             </div>
             <?php if(isset($error)) :?>
-                <h2 style="color:red; position:absolute; top:310px; left:235px;">wrong password!</h2>
+                <h2 style="color:red; position:absolute; top:320px; left:235px;">wrong password!</h2>
             <?php endif;?>
             <div class="input-data">
                 <td><input type="text" name="username" placeholder="username" id="username"></td>
