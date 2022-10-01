@@ -40,7 +40,7 @@
         <h2>Fashion Indonesia Ke Mata Dunia Melalui Front Row Paris 2022</h2><br> <h5>Karya desainer lokal yang tembus pasar Eropa</h5>
     </div>
     <div class="gambar">
-        <img src="img/photo_2022-09-30_14-06-00.png" alt="">
+        <img src="photo_2022-09-30_14-06-00.png" alt="">
     </div>
 
     <div class="conten">
@@ -75,8 +75,37 @@
     <div class="text-link5">
         <div><a href="http://">Baca juga: Brand Fashion lokal akan tampil di new york 2003</a></div>
     </div>
-     <footer>
-        @copyright 2015
-     </footer>
+    <footer class="footer">
+        <p style="color: #fff;">DistinctTrends</p>
+        <div class="border1"></div>
+        <div class="foot-link">
+            <ul>
+                <li>
+                    <a href="">English</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+                <li>
+                    <a href="">Stores</a>
+                </li>
+                <li>
+                    <a href="">Apps</a>
+                </li>
+                <li>
+                    <a href="">Follow Us</a>
+                </li>
+                <li>
+                    <a href="">Legal & Privacy</a>
+                </li>
+                <li>
+                    <a href="about.php">About</a>
+                </li>
+                <li>
+                    <a href="">Sitemap</a href="">
+                </li>
+            </ul>
+        </div>
+</footer>
 </body>
 </html>
