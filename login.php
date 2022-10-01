@@ -45,7 +45,7 @@ if(isset($_POST["login"])){
             padding: 0;
             font-family: 'Quicksand', sans-serif;
         }
-
+        .all
         
         img {
             width: 500px;
@@ -61,7 +61,7 @@ if(isset($_POST["login"])){
         .judul1{
             position: relative;
             top: 130px;
-            left: 330px; 
+            left:555px;
 
         }
         .garis{
@@ -72,13 +72,13 @@ if(isset($_POST["login"])){
         .heading{
             position: relative;
             top: 180px;
-            left: 235px; 
+            left: 463px; 
         }
      
         input{
             position: relative;
             top: 200px;
-            left: 30px;
+            left: 260px;
             width: 300px;
             height: 40px;
             border-radius: 15px;
@@ -100,8 +100,8 @@ if(isset($_POST["login"])){
         .button{
             background-color: #434CE7;
             position: relative;
-            top: -80px;
-            left: 30px;
+            top: -100px;
+            left: 260px;
             width: 100px;
             border-radius: 15px;
             height: 40px;
@@ -113,7 +113,7 @@ if(isset($_POST["login"])){
             height: 500px;
             width: 400px;
             background-color:rgb(201, 200, 200);
-            margin-left: -5px;
+            margin-left: 220px;
             margin-top: -170px;
             border-radius: 15px;
         }
@@ -122,9 +122,6 @@ if(isset($_POST["login"])){
 <body>
     <!-- image -->
     <div class="all"> 
-        <div class="image">
-            <img src="cwk2crop.jpg" alt="">
-        </div>
         <form action="" method="post">
             <div class="judul1">
                 <h3>DistrictTrends</h3>
