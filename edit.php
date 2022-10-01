@@ -8,6 +8,7 @@ if(isset($_POST['submit'])){
     $harga = $_POST['harga'];
     $tanggalRilis = $_POST['tanggalRilis'];
     $stok = $_POST['stok'];
+    $deskripsi = $_POST['deskripsi'];
     $gambar = $_FILES['gambar'];
     $gambarLama = $_POST['gambarLama'];
 
@@ -17,7 +18,7 @@ if(isset($_POST['submit'])){
         $gambar = upload();
     }
     
-    $sql = "UPDATE produk_info SET nama_produk ='$nama', harga = '$harga', tanggal_rilis='$tanggalRilis',stok = '$stok', gambar='$gambar' WHERE id_produk='$id_produk'";
+    $sql = "UPDATE produk_info SET nama_produk ='$nama', harga = '$harga', tanggal_rilis='$tanggalRilis',stok = '$stok', gambar='$gambar', deskripsi='$deskripsi' WHERE id_produk='$id_produk'";
     $query = mysqli_query($conn,$sql);
 
     if($query){
