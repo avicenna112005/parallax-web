@@ -22,9 +22,9 @@
         <div class= navbar>
             <p>DistinctTrends</p>
             <div class="nav-link">
-                <div><a href="http://">Home</a></div>
+                <div><a href="inde.php">Home</a></div>
                 <div><a href="http://">Brand</a></div>
-                <div><a href="http://">About</a></div>
+                <div><a href="about.php">About</a></div>
                 <div><a href="http://">Contact</a></div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     <a href="">Legal & Privacy</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="about.php">About</a>
                 </li>
                 <li>
                     <a href="">Sitemap</a href="">
