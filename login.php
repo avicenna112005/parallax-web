@@ -110,7 +110,7 @@ button{
             <div class="heading">
                 <h4>Admin Dashboard</h4>
                 <h1>Login</h1>
-                <h5>You need to login first to access dashboard <br></h5>
+                <h5>You need to login first to access dashboard <br><a href="signinpage.php">Sign Up</a></h5>
             </div>
             <?php if(isset($error)) :?>
                 <h2 style="color:red; position:absolute; top:320px; left:235px;">wrong password!</h2>
