@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $harga = $_POST['harga'];
     $tanggalRilis = $_POST['tanggalRilis'];
     $stok = $_POST['stok'];
-    $gambar = $_POST['gambar'];
+    $gambar = $_FILES['gambar'];
     $gambarLama = $_POST['gambarLama'];
 
     if($_FILES['gambar']['error'] === 4){

@@ -46,18 +46,6 @@ if(isset($_POST["login"])){
             font-family: 'Quicksand', sans-serif;
         }
 
-        
-        img {
-            width: 500px;
-            height: 700px;
-            position: relative;
-            float: right;
-            margin-right: 10px ;
-            margin-top: 10px ;
-            margin-bottom: 10px;
-            border-radius: 15px;
-
-        }
         .judul1{
             position: relative;
             top: 130px;
@@ -91,7 +79,7 @@ if(isset($_POST["login"])){
         h1{
             position: absolute;
             top: 100px;
-            left: 205px;
+            left: 400px;
         }
         .input-data{
             margin-top: 50px;
@@ -122,27 +110,24 @@ if(isset($_POST["login"])){
         }
         #back{
             position: relative;
-            top: 530px;
-            left: 205px;
+            top: 532px;
+            left: 400px;
         }
     </style>
 </head>
 <body>
     <!-- image -->
-    <div class="all"> 
-        <div class="image">
-            <img src="cwk2crop.jpg" alt="">
-        </div>
+    <div class="all">
        
         <h1>Sign Up For Admin</h1>
         <form action="signin.php" method="post">
-            <table style="position: absolute; top:190px; left:200px;" >
+            <table style="position: absolute; top:190px; left:400px;" >
                 <tr>
                     <td>
                         <label for="name">Permit :</label>
                     </td>
                     <td>
-                        <input type="text" name="kode_permit" id="kode_permit">
+                        <input type="text" name="kode_permit" id="kode_permit" autocomplete="off">
                     </td>
                 </tr>
                 <tr>
@@ -150,7 +135,7 @@ if(isset($_POST["login"])){
                         <label for="username">Username :</label>
                     </td>
                     <td>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" autocomplete="off">
                     </td>
                 </tr>
                 <tr>

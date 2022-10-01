@@ -45,23 +45,16 @@ if(isset($_POST["login"])){
             padding: 0;
             font-family: 'Quicksand', sans-serif;
         }
+        .login{
+            position: relative;
+        }
 
         
-        img {
-            width: 500px;
-            height: 700px;
-            position: relative;
-            float: right;
-            margin-right: 10px ;
-            margin-top: 10px ;
-            margin-bottom: 10px;
-            border-radius: 15px;
-
-        }
+      
         .judul1{
             position: relative;
             top: 130px;
-            left: 330px; 
+            left:555px;
 
         }
         .garis{
@@ -72,13 +65,13 @@ if(isset($_POST["login"])){
         .heading{
             position: relative;
             top: 180px;
-            left: 235px; 
+            left: 463px; 
         }
      
         input{
             position: relative;
             top: 200px;
-            left: 30px;
+            left: 260px;
             width: 300px;
             height: 40px;
             border-radius: 15px;
@@ -100,8 +93,8 @@ if(isset($_POST["login"])){
         .button{
             background-color: #434CE7;
             position: relative;
-            top: -80px;
-            left: 30px;
+            top: -100px;
+            left: 260px;
             width: 100px;
             border-radius: 15px;
             height: 40px;
@@ -113,7 +106,7 @@ if(isset($_POST["login"])){
             height: 500px;
             width: 400px;
             background-color:rgb(201, 200, 200);
-            margin-left: -5px;
+            margin-left: 220px;
             margin-top: -170px;
             border-radius: 15px;
         }
@@ -122,10 +115,8 @@ if(isset($_POST["login"])){
 <body>
     <!-- image -->
     <div class="all"> 
-        <div class="image">
-            <img src="cwk2crop.jpg" alt="">
-        </div>
         <form action="" method="post">
+            <div class="login">
             <div class="judul1">
                 <h3>DistrictTrends</h3>
                 <div class="garis"></div>
@@ -137,7 +128,7 @@ if(isset($_POST["login"])){
                 <a href="signinpage.php" style="position: absolute; left: 0px; top:95px;">Sign In</a>
             </div>
             <?php if(isset($error)) :?>
-                <h2 style="color:red; position:absolute; top:310px; left:235px;">wrong password!</h2>
+                <h2 style="color:red; position:absolute; top:320px; left:235px;">wrong password!</h2>
             <?php endif;?>
             <div class="input-data">
                 <td><input type="text" name="username" placeholder="username" id="username"></td>
@@ -147,6 +138,7 @@ if(isset($_POST["login"])){
                 <br>
                 <div class="background"></div>    
                 <td><a href="dashboard.php" ><button class="button" type="submit" name="login"> Login</button style="cursor: pointer;"></a></td>
+            </div>
             </div>
         </form>
     </div>
