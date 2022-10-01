@@ -421,7 +421,7 @@ body{
     align-items: center;
     color: rgba(49, 49, 49, 0.6);
 }
-.footer p{
+.foot-link{
     position: relative;
     width: 320px;
     height: 56px;

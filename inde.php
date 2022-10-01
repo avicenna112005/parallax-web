@@ -120,16 +120,17 @@
     <!-- footer -->
     <div class="footer">
         <p>DistinctTrends</p>
-    </div>
-    <div class="foot-link">
-        <p>English</p>
-        <p>Contact</p>
-        <p>Stores</p>
-        <p>Apps</p>
-        <p>Follow Us</p>
-        <p>Legal & Privacy</p>
-        <p>About</p>
-        <p>Sitemap</p>
+
+        <div class="foot-link">
+            <p>English</p>
+            <p>Contact</p>
+            <p>Stores</p>
+            <p>Apps</p>
+            <p>Follow Us</p>
+            <p>Legal & Privacy</p>
+            <p>About</p>
+            <p>Sitemap</p>
+        </div>
     </div>
     
 </body>
