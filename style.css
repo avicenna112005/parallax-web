@@ -12,14 +12,15 @@ body{
     align-items: center;
     background-color: white;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid black;
 }
 
 .navbar p{
     font-size: 30px;
     font-family:'Pacifico', cursive;
     text-align: center;
-    position: relative;
-    left: 530px;
+    position: absolute;
+    left: 590px;
     margin-top: -70px;
 }
 
@@ -31,7 +32,7 @@ body{
     justify-content: space-between;
     position: absolute;
     top: 140px;
-    left: 400px;
+    left: 440px;
 }
 .nav-link a{
     text-decoration: none;
@@ -45,231 +46,31 @@ body{
     background-image: url('fashion.png');
     background-size: cover;
     height: 770px;
-    width: 1301px;
+    width: auto;
+    border-bottom: 1px solid black;
 
 }
-#section1 button{
-    width: 282px;
-    height: 56px;
-    margin-top: 696px;
-    margin-left: 520px;
-    border-radius: 25px;
+#section1 a{
+    position: relative;
+    top: 600px;
+}
+#section1 a button{
     background-color: transparent;
-    border-color: white;
+    color: #313131;
+    font-size: 15px;
+    font-weight: bold;
+    height: 70px;
+    width: 320px;
+    border-radius: 18px;
+    cursor: pointer;
 }
 #section2{
-    background-image: url('freestocks-_3Q3tsJ01nc-unsplash.png');
+    background-image: url('');
     background-size: cover;
-    width: 1266px;
-    height: 845px;
-    left: 0;
-    top: 970px;
-}
-#section2 button{
-    width: 282px;
-    height: 56px;
-    border-radius: 25px;
-    margin-top: 769px;
-    margin-left: 200px;
-    background-color: transparent;
-    color: white;
-    border-color: white;
-}
-.text{
-    position: absolute;
-    width: 186px;
-    height: 64px;
-    left: 56px;
-    top: 1846px;
-    font-family:'Lora', serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 41px;
-    display: flex;
-    align-items: center;
-    color: rgba(49, 49, 49, 0.86);
-}
-#section3{
-    background-image: url('photo_2022-09-30_14-06-00.png');
-    background-size: 400px;
-    position: absolute;
-    width: 280px;
-    height: 220px;
-    left: 94px;
-    top: 1941px;
-}
-#section4{
-    background-image: url('berlin-fashion-week-autumn-2015.png');
-    position: absolute;
-    width: 267px;
-    height: 220px;
-    left: 400px;
-    top: 1941px;
-}
-#section5{
-    background-image: url('621319eeca7b2.png');
-    background-size: cover;
-    position: absolute;
-    width: 330px;
-    height: 220px;
-    left: 690px;
-    top: 1941px;
-}
-#section6{
-    background-image: url('036274500_1488368937-_MG_0553.png');
-    background-size: cover;
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    left: 1040px;
-    top: 1941px;
-}
-#section7{
-    background-image: url('katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.png');
-    background-size: contain;
-    position: absolute;
-    width: 186px;
-    height: 250px;
-    left: 90px;
-    top: 1010px;
-}
-#section7 p{
-    position: absolute;
-    width: 86px;
-    height: 36px;
-    left: 0;
-    top: 250px;
+    height: 850px;
+    width: auto;
+    border-bottom: 1px solid black;
 
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-
-    color: whitesmoke;
-}
-#section8{
-    background-image: url('reza-delkhosh-iRAOJYtPHZE-unsplash.png');
-    background-size: contain;
-    position: absolute;
-    width: 230.97px;
-    height: 250px;
-    left: 360px;
-    top: 1010px;
-}
-#section8 p{
-    position: absolute;
-    width: 86px;
-    height: 43.1px;
-    left: 0;
-    top: 250px;
-
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-
-    color: whitesmoke;
-}
-#section9{
-    background-image: url('mohamadreza-khashay-ziubUDopHmc-unsplash.png');
-    background-size: contain;
-    position: absolute;
-    width: 197.69px;
-    height: 246px;
-    left: 664px;
-    top: 1010px;
-}
-#section9 p{
-    position: absolute;
-    width: 86px;
-    height: 50px;
-    left: 0;
-    top: 250px;
-
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-
-    color: whitesmoke;
-}
-#section10{
-    background-image: url('tanya-layko-QINaeQQHghQ-unsplash.png');
-    background-size: contain;
-    position: absolute;
-    width: 189px;
-    height: 250px;
-    left: 930px;
-    top: 1010px;
-}
-#section10 p{
-    position: absolute;
-    width: 86px;
-    height: 50px;
-    left: 0;
-    top: 250px;
-
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-
-    color: whitesmoke;
-}
-.text-link1{
-    font-family: 'Lora', serif;
-    font-size: 13px;
-    display: flex;
-    width: 230px;
-    position: absolute;
-    top: 2176px;
-    left: 94px;
-    line-height: 20px;
-    font-weight: 600;
-
-    color: #1d42c5;
-}
-.text-link1 a{
-    text-decoration: none;
-}
-.text-link1 a:hover{
-    color: grey;
-}
-.web1{
-    position: absolute;
-    width: 1500px;
-    height: 38px;
-    left: 93px;
-    margin-top: 415px;
-    font-family:'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-
-    color: rgba(49, 49, 49, 0.6);
-}
-.viewers1{
-    position: absolute;
-    width: 158px;
-    height: 26px;
-    left: 1040px;
-    margin-top: 440px;
-    font-family:'Lora', serif ;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    color: rgba(49, 49, 49, 0.6);
 }
 .foot-link{
     position: relative;

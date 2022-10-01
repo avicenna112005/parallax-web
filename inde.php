@@ -29,7 +29,9 @@
     
         <!-- navbar -->
         <div class= navbar>
-            <p>DistinctTrends</p>
+            <center>
+                <p>DistinctTrends</p>
+            </center>
 
             <div class="nav-link">
                 <div><a href="">Home</a></div>
@@ -38,47 +40,17 @@
                 <div><a href="http://">Contact</a></div>
             </div>
         </div>
-    
     </div>
     <section id="section1">
-        <a href=""><button>Discover The exclusive Digital Brand</button></a>
+        <center>
+            <a href="">
+                <button>Discover The Exclusive Digital Brand</button>
+            </a>
+        </center>
     </section>
     <section id="section2">
-        <a href=""><button>The New Collection</button></a>
-        <a href=""><button>Essential Accessoris DT</button></a>
-    </section>
-   
-    <div id="section3">
-      
-    </div>
-   
-   
-    <div id="section7">
-        <p>New Product $76</p>
-    </div>
-    <div id="section8">
-        <p>New Product $80</p>
-    </div>
-    <div id="section9">
-        <p>New Product $115</p>
-    </div>
-    <div id="section10">
-        <p>New Product $120</p>
-    </div>
-   
-    <div class="text">
-        <p>Top Stories</p>
-    </div>
-    <div class="text-link1">
-        <div><a href="http://">Fashion Indonesia dimata dunia melalui front row paris 2022</a></div> 
-    </div>
-    
-    <div class="web1">
-        <p>Idntimes.com</p>
-    </div>
-   
-    
 
+    </section>
     <!-- footer -->
     <div class="footer">
         <p>DistinctTrends</p>
