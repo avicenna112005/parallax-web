@@ -32,9 +32,9 @@
             <p>DistinctTrends</p>
 
             <div class="nav-link">
-                <div><a href="http://">Home</a></div>
+                <div><a href="">Home</a></div>
                 <div><a href="http://">Brand</a></div>
-                <div><a href="http://">About</a></div>
+                <div><a href="about.php">About</a></div>
                 <div><a href="http://">Contact</a></div>
             </div>
         </div>
@@ -48,33 +48,23 @@
         <a href=""><button>Essential Accessoris DT</button></a>
     </section>
    
-    <section id="section3">
+    <div id="section3">
       
-    </section>
+    </div>
    
-    <section id="section4">
-
-    </section>
    
-    <section id="section5">
-
-    </section>
-
-    <section id="section6">
-
-    </section>
-    <section id="section7">
+    <div id="section7">
         <p>New Product $76</p>
-    </section>
-    <section id="section8">
+    </div>
+    <div id="section8">
         <p>New Product $80</p>
-    </section>
-    <section id="section9">
+    </div>
+    <div id="section9">
         <p>New Product $115</p>
-    </section>
-    <section id="section10">
+    </div>
+    <div id="section10">
         <p>New Product $120</p>
-    </section>
+    </div>
    
     <div class="text">
         <p>Top Stories</p>
@@ -82,40 +72,12 @@
     <div class="text-link1">
         <div><a href="http://">Fashion Indonesia dimata dunia melalui front row paris 2022</a></div> 
     </div>
-    <div class="text-link2">
-        <div><a href="http://">DistinctTrends Brand Focused Product Denim Jacket’s</a></div>
-    </div>
-    <div class="text-link3">
-        <div><a href="http://">DistinctTrends Brand Focused Product Denim Jacket’s</a></div>
-    </div>
-    <div class="text-link4">
-        <div><a href="http://">DistinctTrends Brand Focused Product Denim Jacket’s</a></div>
-    </div>
+    
     <div class="web1">
         <p>Idntimes.com</p>
     </div>
-    <div class="web2">
-        <p>DBC Morning News</p>
-    </div>
-    <div class="web3">
-        <p>DBC Morning News</p>
-    </div>
-    <div class="web4">
-        <p>DBC Morning News</p>
-    </div>
-    <div class="viewers1">
-        <p>2K Views - 5 Days ago</p>
-    </div>
-    <div class="viewers2">
-        <p>2K Views - 5 Days ago</p>
-    </div>
-    <div class="viewers3">
-        <p>2K Views - 5 Days ago</p>
-    </div>
-    <div class="viewers4">
-        <p>2K Views - 5 Days ago</p>
-    </div>
-
+   
+    
 
     <!-- footer -->
     <div class="footer">

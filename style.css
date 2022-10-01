@@ -26,7 +26,7 @@ body{
  
 
 #section1{
-    background-image: url('/img/fashion.png');
+    background-image: url('fashion.png');
     background-size: cover;
     height: 770px;
     width: 1301px;
@@ -42,7 +42,7 @@ body{
     border-color: white;
 }
 #section2{
-    background-image: url('/img/freestocks-_3Q3tsJ01nc-unsplash.png');
+    background-image: url('freestocks-_3Q3tsJ01nc-unsplash.png');
     background-size: cover;
     width: 1266px;
     height: 845px;
@@ -75,7 +75,7 @@ body{
     color: rgba(49, 49, 49, 0.86);
 }
 #section3{
-    background-image: url('/img/photo_2022-09-30_14-06-00.png');
+    background-image: url('photo_2022-09-30_14-06-00.png');
     background-size: 400px;
     position: absolute;
     width: 280px;
@@ -84,7 +84,7 @@ body{
     top: 1941px;
 }
 #section4{
-    background-image: url('/img/berlin-fashion-week-autumn-2015.png');
+    background-image: url('berlin-fashion-week-autumn-2015.png');
     position: absolute;
     width: 267px;
     height: 220px;
@@ -92,7 +92,7 @@ body{
     top: 1941px;
 }
 #section5{
-    background-image: url('/img/621319eeca7b2.png');
+    background-image: url('621319eeca7b2.png');
     background-size: cover;
     position: absolute;
     width: 330px;
@@ -101,7 +101,7 @@ body{
     top: 1941px;
 }
 #section6{
-    background-image: url('/img/036274500_1488368937-_MG_0553.png');
+    background-image: url('036274500_1488368937-_MG_0553.png');
     background-size: cover;
     position: absolute;
     width: 220px;
@@ -110,7 +110,7 @@ body{
     top: 1941px;
 }
 #section7{
-    background-image: url('/img/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.png');
+    background-image: url('katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.png');
     background-size: contain;
     position: absolute;
     width: 186px;
@@ -134,7 +134,7 @@ body{
     color: whitesmoke;
 }
 #section8{
-    background-image: url('/img/reza-delkhosh-iRAOJYtPHZE-unsplash.png');
+    background-image: url('reza-delkhosh-iRAOJYtPHZE-unsplash.png');
     background-size: contain;
     position: absolute;
     width: 230.97px;
@@ -158,7 +158,7 @@ body{
     color: whitesmoke;
 }
 #section9{
-    background-image: url('/img/mohamadreza-khashay-ziubUDopHmc-unsplash.png');
+    background-image: url('mohamadreza-khashay-ziubUDopHmc-unsplash.png');
     background-size: contain;
     position: absolute;
     width: 197.69px;
@@ -182,7 +182,7 @@ body{
     color: whitesmoke;
 }
 #section10{
-    background-image: url('/img/tanya-layko-QINaeQQHghQ-unsplash.png');
+    background-image: url('tanya-layko-QINaeQQHghQ-unsplash.png');
     background-size: contain;
     position: absolute;
     width: 189px;
@@ -224,116 +224,11 @@ body{
 .text-link1 a:hover{
     color: grey;
 }
-.text-link2{
-    font-family: 'Lora', serif;
-    font-size: 13px;
-    display: flex;
-    width: 230px;
-    position: absolute;
-    top: 2176px;
-    left: 400px;
-    line-height: 20px;
-    font-weight: 600;
-
-    color: #1d42c5;
-}
-.text-link2 a{
-    text-decoration: none;
-}
-.text-link2 a:hover{
-    color: grey;
-}
-.text-link3{
-    font-family: 'Lora', serif;
-    font-size: 13px;
-    display: flex;
-    width: 230px;
-    position: absolute;
-    top: 2176px;
-    left: 690px;
-    line-height: 20px;
-    font-weight: 600;
-
-    color: #1d42c5;
-}
-.text-link3 a{
-    text-decoration: none;
-}
-.text-link3 a:hover{
-    color: grey;
-}
-.text-link4{
-    font-family: 'Lora', serif;
-    font-size: 13px;
-    display: flex;
-    width: 230px;
-    position: absolute;
-    top:2176px;
-    left: 1040px;
-    line-height: 20px;
-    font-weight: 600;
-
-    color: #1d42c5;
-}
-.text-link4 a{
-    text-decoration: none;
-}
-.text-link4 a:hover{
-    color: grey;
-}
 .web1{
     position: absolute;
     width: 1500px;
     height: 38px;
     left: 93px;
-    margin-top: 415px;
-    font-family:'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-
-    color: rgba(49, 49, 49, 0.6);
-}
-.web2{
-    position: absolute;
-    width: 1500px;
-    height: 38px;
-    left: 400px;
-    margin-top: 415px;
-    font-family:'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-
-    color: rgba(49, 49, 49, 0.6);
-}
-.web3{
-    position: absolute;
-    width: 1500px;
-    height: 38px;
-    left: 689px;
-    margin-top: 415px;
-    font-family:'Lora', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-
-    color: rgba(49, 49, 49, 0.6);
-}
-.web4{
-    position: absolute;
-    width: 1500px;
-    height: 38px;
-    left: 1040px;
     margin-top: 415px;
     font-family:'Lora', serif;
     font-style: normal;
@@ -355,51 +250,6 @@ body{
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    color: rgba(49, 49, 49, 0.6);
-}
-.viewers2{
-    position: absolute;
-    width: 158px;
-    height: 26px;
-    left: 92px;
-    margin-top: 440px;
-    font-family:'Lora', serif ;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    color: rgba(49, 49, 49, 0.6);
-}
-.viewers3{
-    position: absolute;
-    width: 158px;
-    height: 26px;
-    left: 400px;
-    margin-top: 440px;
-    font-family:'Lora', serif ;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    color: rgba(49, 49, 49, 0.6);
-}
-.viewers4{
-    position: absolute;
-    width: 158px;
-    height: 26px;
-    left: 688px;
-    margin-top: 440px;
-    font-family:'Lora', serif ;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
     line-height: 18px;
     display: flex;
     align-items: center;

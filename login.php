@@ -40,89 +40,69 @@ if(isset($_POST["login"])){
     <!-- link font -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Quicksand', sans-serif;
-        }
-        .all
-        
-        img {
-            width: 500px;
-            height: 700px;
-            position: relative;
-            float: right;
-            margin-right: 10px ;
-            margin-top: 10px ;
-            margin-bottom: 10px;
-            border-radius: 15px;
+       * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.login{
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: rgb(201, 200, 200);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.judul1{
+    text-align: center;
+    padding-top: 30px;
 
-        }
-        .judul1{
-            position: relative;
-            top: 130px;
-            left:555px;
-
-        }
-        .garis{
-            border: 0.1px solid black;
-            width: 125px;  
-            position: absolute; 
-        }
-        .heading{
-            position: relative;
-            top: 180px;
-            left: 463px; 
-        }
-     
-        input{
-            position: relative;
-            top: 200px;
-            left: 260px;
-            width: 300px;
-            height: 40px;
-            border-radius: 15px;
-            align-items: center;
-            padding-left:  10px;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.51);
-            border-color: transparent;
-            background-color: #D9D9D9;
-        }
-        h5{
-            margin-top: 10px;
-        }
-        .input-data{
-            margin-top: 50px;
-            margin-left: 200px;
-            align-items: center;
-            
-        }
-        .button{
-            background-color: #434CE7;
-            position: relative;
-            top: -100px;
-            left: 260px;
-            width: 100px;
-            border-radius: 15px;
-            height: 40px;
-            border: none;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.51);
-            border-color: transparent;
-        }
-        .background{
-            height: 500px;
-            width: 400px;
-            background-color:rgb(201, 200, 200);
-            margin-left: 220px;
-            margin-top: -170px;
-            border-radius: 15px;
-        }
+}
+.garis{
+    border: 0.1px solid black;
+    width: 127px;
+    margin-left: 136px;
+}
+.heading{
+    padding-top: 50px;
+    padding-left: 45px;
+}
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: #D9D9D9;
+    padding-left: 10px;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.51);
+}
+.input-data{
+    padding-left: 45px;
+    padding-top: 45px;
+}
+button{
+    margin-top: 20px;
+    background-color: #434CE7;
+    color: white ;
+    align-items: center;
+    width: 100px;
+    height:40px;
+    left: 250px;
+    padding-left: 0;
+    border: none;
+    border-radius:15px;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.51);
+    
+}
     </style>
 </head>
 <body>
     <!-- image -->
-    <div class="all"> 
+ 
         <form action="" method="post">
+            <div class="login">
             <div class="judul1">
                 <h3>DistrictTrends</h3>
                 <div class="garis"></div>
@@ -130,8 +110,7 @@ if(isset($_POST["login"])){
             <div class="heading">
                 <h4>Admin Dashboard</h4>
                 <h1>Login</h1>
-                <h5>You need to login first to access dashboard</h5>
-                <a href="signinpage.php" style="position: absolute; left: 0px; top:95px;">Sign In</a>
+                <h5>You need to login first to access dashboard <br></h5>
             </div>
             <?php if(isset($error)) :?>
                 <h2 style="color:red; position:absolute; top:320px; left:235px;">wrong password!</h2>
@@ -145,7 +124,7 @@ if(isset($_POST["login"])){
                 <div class="background"></div>    
                 <td><a href="dashboard.php" ><button class="button" type="submit" name="login"> Login</button style="cursor: pointer;"></a></td>
             </div>
+            </div>
         </form>
-    </div>
 </body>
 </html>

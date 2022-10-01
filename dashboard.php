@@ -180,12 +180,15 @@ if(!isset($_SESSION["login"])){
                                     <th scope="col">Harga</th>
                                     <th scope="col">Tanggal Rilis</th>
                                     <th scope="col">Stok</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Action</th>
                                 
                                 </tr>
                             </thead>
-                            
+                           
+                                   
+                              
                             <tbody>
                             <?php 
                             $i = 1;
@@ -201,6 +204,7 @@ if(!isset($_SESSION["login"])){
                                 <td>$value[harga]</td>
                                 <td>$value[tanggal_rilis]</td>
                                 <td>$value[stok]</td>
+                                <td style=' word-wrap: break-word;max-width: 150px;'>$value[deskripsi]</td>
                                 <td>$value[gambar]</td>
                                 
                                 <td>

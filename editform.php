@@ -195,6 +195,10 @@ if(!isset($_SESSION["login"])){
                             <input type="number" class="form-control" id="exampleInputPassword1" name="stok" value="<?= $value['stok']?>">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" value="<?= $value['deskripsi']?>">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Gambar</label>
                             <br>
                             <img src="image/<?=$value ['gambar'] ?>" alt="" width="150">
