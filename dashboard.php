@@ -204,8 +204,8 @@ if(!isset($_SESSION["login"])){
                                 <td>$value[harga]</td>
                                 <td>$value[tanggal_rilis]</td>
                                 <td>$value[stok]</td>
-                                <td style=' word-wrap: break-word;max-width: 150px;'>$value[deskripsi]</td>
-                                <td>$value[gambar]</td>
+                                <td style='word-wrap: break-word;max-width: 150px;'>$value[deskripsi]</td>
+                                <td style='word-wrap: break-word;max-width: 120px;'>$value[gambar]</td>
                                 
                                 <td>
                                     <a href='editform.php?id_produk=".$value['id_produk']."' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>
