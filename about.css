@@ -13,7 +13,6 @@ body{
     background-color: white;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
-
 .navbar p{
     font-size: 30px;
     font-family:'Pacifico', cursive;
@@ -22,7 +21,6 @@ body{
     left: 530px;
     margin-top: -70px;
 }
-
 .nav-link{
     font-family: 'Lora', serif;
     font-size: 13px;
@@ -71,7 +69,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 .foot-link{
     display: flex;
     align-items: center;
@@ -83,7 +80,6 @@ body{
     display: flex;
     list-style: none;
 }
-
 .foot-link ul li a{
     text-decoration: none;
     color: #fff;

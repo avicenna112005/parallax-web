@@ -7,6 +7,7 @@ if(isset($_POST['submit2'])){
     $judul = $_POST['judul'];
     $headline = $_POST['headline'];
     $isi1 = $_POST['isi1'];
+    $subjudul = $_POST['subjudul'];
     $isi2 = $_POST['isi2'];
     $id_berita = $_POST['id_berita'];
     $gambar = $_FILES['gambar2'];
@@ -18,7 +19,7 @@ if(isset($_POST['submit2'])){
         $gambar = upload2();
     }
     
-    $sql = "UPDATE berita SET judul ='$judul', headline = '$headline', isi1 = '$isi1', isi2 = '$isi2', gambar = '$gambar' WHERE id_berita='$id_berita'";
+    $sql = "UPDATE berita SET judul ='$judul', headline = '$headline', isi1 = '$isi1', subjudul = '$subjudul', isi2 = '$isi2', gambar = '$gambar' WHERE id_berita='$id_berita'";
     $query = mysqli_query($conn,$sql);
 
     if($query){

@@ -7,6 +7,7 @@ if(isset($_POST['submit'])){
     $headline = $_POST['headline'];
     $tanggalUp = $_POST['tanggalUp'];
     $isi1 = $_POST['isi1'];
+    $subjudul = $_POST['subjudul'];
     $isi2 = $_POST['isi2'];
 
     $gambar = upload2();
@@ -14,7 +15,7 @@ if(isset($_POST['submit'])){
         return false;
     }
 
-    $sql = "INSERT INTO berita VALUES ('','$judul','$tanggalUp','$headline','$isi1','$isi2','$gambar')";
+    $sql = "INSERT INTO berita VALUES ('','$judul','$tanggalUp','$headline','$isi1','$subjudul','$isi2','$gambar')";
     $query = mysqli_query($conn,$sql);
 
     if($query){

@@ -193,6 +193,10 @@ if(!isset($_SESSION["login"])){
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi1" value="<?= $value['isi1']?>">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Subjudul</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="subjudul" value="<?= $value['subjudul']?>">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Isi 2</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi2" value="<?= $value['isi2']?>">
                         </div>

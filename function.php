@@ -64,7 +64,7 @@ function upload(){
     }
 
     // cek ukuran gambar
-    if($ukuran > 2000000){
+    if($ukuran > 20000000){
         echo "<script>
                 alert('file size too big!')
                 document.href.location = 'create.php'
@@ -110,7 +110,7 @@ function upload2(){
     }
 
     // cek ukuran gambar
-    if($ukuran > 2000000){
+    if($ukuran > 20000000){
         echo "<script>
                 alert('file size too big!')
                 document.href.location = 'create2.php'

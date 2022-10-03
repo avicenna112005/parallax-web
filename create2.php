@@ -190,6 +190,10 @@ if(!isset($_SESSION["login"])){
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi1" required>
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Subjudul</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="subjudul" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Isi 2</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi2" required>
                         </div>
