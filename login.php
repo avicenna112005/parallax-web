@@ -111,9 +111,10 @@ button{
                 <h4>Admin Dashboard</h4>
                 <h1>Login</h1>
                 <h5>You need to login first to access dashboard <br><a href="signinpage.php">Sign Up</a></h5>
+
             </div>
             <?php if(isset($error)) :?>
-                <h2 style="color:red; position:absolute; top:320px; left:235px;">wrong password!</h2>
+                <h2 style="color:red; position:absolute; top:72%; left:44%;">wrong password!</h2>
             <?php endif;?>
             <div class="input-data">
                 <td><input type="text" name="username" placeholder="username" id="username"></td>

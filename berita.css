@@ -4,23 +4,25 @@ body{
     font-family:'Roboto', sans-serif;
     overflow-x: hidden;
 }
-
 .navbar{
     width: 500%;
-    height: 180px;
+    height: 160px;
     display: flex;
     align-items: center;
     background-color: white;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid black;
 }
+
 .navbar p{
     font-size: 30px;
     font-family:'Pacifico', cursive;
     text-align: center;
     position: relative;
-    left: 530px;
-    margin-top: -70px;
+    left: 8.5%;
+    margin-top: -20px;
 }
+
 .nav-link{
     font-family: 'Lora', serif;
     font-size: 13px;
@@ -28,8 +30,8 @@ body{
     width: 500px;
     justify-content: space-between;
     position: absolute;
-    top: 140px;
-    left: 400px;
+    top: 120px;
+    left: 32%;
 }
 .nav-link a{
     text-decoration: none;
@@ -38,37 +40,56 @@ body{
 .nav-link a:hover{
     color: grey;
 }
-#model{
-    position: absolute;
-    top: 45%;
-    left: 66%;
-    width: 400px;
-    height: 300px;
+.text-link5 a{
+    text-decoration: none;
 }
-.wrap{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 550px;
-    font-family: 'Quicksand', sans-serif;
-    
+.text-link5 a:hover{
+    color: grey;
 }
-.wrap p:first-child{
-    font-size: 20px;
+.title{
+    position: relative;
+    left: 6.5%;
+    width: 87%;
 }
-.wrap p:last-child{
-    font-size: 16px;
+.title h1{
+    font-size: 40px;
+    font-family: 'Lora', serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 30px;
 }
-
+#capt{
+    position: relative;
+    left: 6.5%;
+}
+.imagediv{
+    width: 87%;
+    margin-top: 3%;
+    height: 600px;
+}
+.imagediv img{
+    width: 100%;
+    height: 100%;
+}
+.isi{
+    font-family: 'Lora', serif;
+    position: relative;
+    left: 6.5%;
+    width: 87%;        
+}   
+.para1, .para2{
+    width: 81%;        
+}
 .footer{
     width:100%;
     height: 220px;
     background-color: #313131;
     position: absolute;
-    top: 115%;
+    top: 220%;
     display: flex;
     flex-direction: column;
 }
+
 .foot-link{
     display: flex;
     align-items: center;
@@ -80,6 +101,7 @@ body{
     display: flex;
     list-style: none;
 }
+
 .foot-link ul li a{
     text-decoration: none;
     color: #fff;

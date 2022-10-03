@@ -1,7 +1,8 @@
 <?php 
 session_start();
 include 'conn.php';
-$id_berita = $_GET['id_berita'];
+include 'function.php';
+$id_berita = $_GET['id_berita'];  
 $sql = "SELECT * FROM berita WHERE id_berita = '$id_berita'";
 $query = mysqli_query($conn,$sql);
 $value = mysqli_fetch_assoc($query);
@@ -171,9 +172,10 @@ if(!isset($_SESSION["login"])){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Edit Data Barang</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Edit Data Berita</h1>
 
-                    <form action="edit2.php" method="post">
+                    <form action="edit2.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="gambarLama2" value="<?= $value['gambar'];?>">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label" style="display: none;">ID Produk</label>
                             <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id_berita" value="<?= $value['id_berita']?>">
@@ -191,12 +193,22 @@ if(!isset($_SESSION["login"])){
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi1" value="<?= $value['isi1']?>">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Subjudul</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="subjudul" value="<?= $value['subjudul']?>">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Isi 2</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="isi2" value="<?= $value['isi2']?>">
                         </div>
-                       
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Gambar</label>
+                            <br>
+                            <img src="image/<?=$value ['gambar'] ?>" alt="" width="150">
+                            <br><br>
+                            <input type="file" id="exampleInputPassword1" name="gambar2">
+                        </div>
                         
-                        <button type="submit" class="btn btn-primary" name="submit">Ubah</button>
+                        <button type="submit" class="btn btn-primary" name="submit2">Ubah</button>
                     </form>
                 </div>
                 <!-- /.container-fluid -->

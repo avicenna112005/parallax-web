@@ -172,26 +172,34 @@ if(!isset($_SESSION["login"])){
                     <h1 class="h3 mb-4 text-gray-800" style="margin-top: 4%;">Tambah Data Berita</h1>
 
                     <!-- isi disini -->
-                    <form action="savecreate2.php" method="post">
+                    <form action="savecreate2.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Judul</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="judul">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="judul" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Headline</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name="headline">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="headline" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Tanggal Upload</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalUp">
+                            <input type="date" class="form-control" id="exampleInputPassword1" name="tanggalUp" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Isi 1</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi1">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Subjudul</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="subjudul" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Isi 2</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi2">
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="isi2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Gambar</label>
+                            <input type="file" id="exampleInputPassword1" name="gambar2" style="margin-left: 70px;" required>
                         </div>
                         
                         <button type="submit" class="btn btn-primary" name="submit">Tambahkan</button>

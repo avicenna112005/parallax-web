@@ -184,6 +184,7 @@ if(!isset($_SESSION["login"])){
                                     <th scope="col">Tanggal Upload</th>
                                     <th scope="col">Headline</th>
                                     <th scope="col">Isi 1</th>
+                                    <th scope="col">Subjudul</th>
                                     <th scope="col">Isi 2</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Action</th>
@@ -204,8 +205,9 @@ if(!isset($_SESSION["login"])){
                                 <td>$value[judul]</td>
                                 <td>$value[tanggal_upload]</td>
                                 <td>$value[headline]</td>
-                                <td>$value[isi1]</td>
-                                <td>$value[isi2]</td>
+                                <td style='word-wrap: break-word;max-width: 150px;'>$value[isi1]</td>
+                                <td style='word-wrap: break-word;max-width: 150px;'>$value[subjudul]</td>
+                                <td style='word-wrap: break-word;max-width: 150px;'>$value[isi2]</td>
                                 <td>$value[gambar]</td>
                                 <td>
                                     <a href='editform2.php?id_berita=".$value['id_berita']."' style='color: #fff;'> <button type='button' class='btn btn-success'>Edit</button></a>

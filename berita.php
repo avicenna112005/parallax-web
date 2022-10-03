@@ -1,23 +1,36 @@
+<?php 
+include 'conn.php';
+$id_berita = $_GET['id_berita'];
+$sql = "SELECT * FROM berita WHERE id_berita = '$id_berita'";
+$query = mysqli_query($conn,$sql);
+$value = mysqli_fetch_assoc($query);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DistincTrends - About</title>
     <style>
-        <?php include 'about.css'
-    ?>
+        <?php include 'berita.css';?>
     </style>
+    <title>DistinctTrends</title>
+
+
+    <!-- font pacifico-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!--font lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?  family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Pacifico&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container">
+<nav class="container">
         <!-- navbar -->
         <div class= navbar>
             <p>DistinctTrends</p>
@@ -29,14 +42,28 @@
             </div>
         </div>
 
-    </div>
-    <div class="wrap">
-        <h1 style="font-size: 40px;">About Us</h1>
-        <p>DistinctTrends pertama kali didirikan pada tahun 2005. Selama bertahun-tahun, DistinctTrends telah mengalami perubahan yang luar biasa untuk menjadi lebih etis dan relevan di era baru industri mode seni lokal dan internasional. Dengan dua lokasi fisik: satu di JL Sudirman Jakarta dan di kota Bandung. Staf yang ramah, dikombinasikan dengan lingkungan yang nyaman dan ramah.</p>
-        <p>Perusahaan fashion dengan warisan yang kuat dan tujuan yang lebih tinggi - untuk memberdayakan dan menginspirasi wanita dan pria di mana pun. Itulah kita</p>
-
-    </div>
-    <img src="mdl.jpg" alt="" id="model">
+    </nav>
+    <section>
+        <div class="title">
+            <h1 id="judul"><?= $value['judul']?></h1>
+        </div>
+        <center>    
+            <div class="imagediv">
+                <img src="image/<?= $value['gambar']?>" alt="">
+            </div>
+        </center>
+        <p id="capt">Uploaded in <?= $value ['tanggal_upload']?></p>
+        <div class="isi">
+            <h2><?= $value['headline']?></h2>
+            <div class="para1">
+                <p><?= $value['isi1']?></p>
+            </div>
+            <h2><?= $value['subjudul']?></h2>
+            <div class="para2">
+                <p><?= $value['isi2']?></p>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <p style="color: #fff;">DistinctTrends</p>
         <div class="border1"></div>
@@ -64,10 +91,10 @@
                     <a href="about.php">About</a>
                 </li>
                 <li>
-                    <a href="">Sitemap</a href="">
+                    <a href="">Sitemap</a>
                 </li>
             </ul>
         </div>
-</footer>
+    </footer>
 </body>
 </html>
