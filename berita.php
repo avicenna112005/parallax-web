@@ -15,7 +15,7 @@ $value = mysqli_fetch_assoc($query);
     <style>
         <?php include 'berita.css';?>
     </style>
-    <title>DistinctTrends</title>
+    <title>DistinctTrends - News</title>
 
 
     <!-- font pacifico-->
